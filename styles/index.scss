@@ -1,0 +1,123 @@
+@import './lib.scss';
+@import './common.scss';
+@import './yuque.scss';
+
+@import './header.scss';
+@import './core.scss';
+@import './comment.scss';
+
+$weight: bold normal 300 400 500 600;
+$size: 20 22 24 26 28 30 32 34 36 38 40 50 60 70 80;
+
+.author {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    display: block;
+    width: px2rem(60);
+    height: px2rem(60);
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: px2rem(20);
+    @each $item in $size {
+      &.size-#{$item} {
+        width: #{px2rem($item)};
+        height: #{px2rem($item)};
+      }
+    }
+  }
+
+  .name {
+    font-size: px2rem(28);
+    color: #333;
+    @each $item in $weight {
+      &.weight-#{$item} {
+        font-weight: $item;
+      }
+    }
+    @each $item in $size {
+      &.fontSize-#{$item} {
+        font-weight: $item;
+      }
+    }
+  }
+}
+
+.no-more {
+  text-align: center;
+  font-size: 10px;
+  color: #b0b0b0;
+  font-size: px2rem(28);
+  padding: px2rem(40) 0 px2rem(100);
+  background-color: #f6f6f6;
+  // &.none {
+  //   display: none;
+  // }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: stretch;
+
+  &.none {
+    display: none;
+  }
+  .container {
+    border-radius: px2rem(36) px2rem(36) 0 0;
+    // height: 80%;
+    // min-height: calc(100% - #{px2rem(284)});
+    height: calc(100% - #{px2rem(284)});
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #fff;
+    .header {
+      flex: none;
+      height: px2rem(90);
+      line-height: px2rem(90);
+      font-weight: 500;
+      font-size: px2rem(34);
+      color: #333333;
+      text-align: center;
+      border-bottom: px2rem(1) solid #e5e5e5;
+      background: url(https://qgt-style.oss-cn-hangzhou.aliyuncs.com/img/sandwich/close-comment-sec.png)
+        no-repeat px2rem(30) / px2rem(30);
+    }
+    .comment-list {
+      min-height: calc(100% - #{px2rem(90)});
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      > div {
+        flex: none;
+      }
+      .divider {
+        height: px2rem(80);
+        font-weight: 500;
+        color: #333;
+        font-size: px2rem(32);
+        background: #F6F6F6;
+        line-height: px2rem(80);
+        padding: 0 px2rem(40);
+        border-width: px2rem(1);
+      }
+      .box {
+        flex: 1;
+        background: #F6F6F6;
+        .item {
+          padding-left: px2rem(40);
+        }
+      }
+    }
+  }
+}

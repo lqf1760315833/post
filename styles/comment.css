@@ -1,0 +1,101 @@
+.comment-list .item {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 px2rem(30);
+  position: relative;
+}
+
+.comment-list .item .time-actions,
+.comment-list .item .reply,
+.comment-list .item .content {
+  margin-left: px2rem(80);
+}
+
+.comment-list .floor {
+  position: absolute;
+  top: px2rem(34);
+  right: px2rem(30);
+  font-size: px2rem(24);
+  color: #9b9b9b;
+}
+
+.comment-list .author {
+  padding-top: px2rem(20);
+  padding-bottom: px2rem(10);
+}
+
+.comment-list .content {
+  overflow: hidden;
+  font-size: px2rem(30);
+  color: #484848;
+  line-height: px2rem(42);
+  padding-bottom: px2rem(20);
+}
+
+.comment-list .content a {
+  color: #3492fd;
+  text-decoration: none;
+}
+
+.comment-list .time-actions {
+  height: px2rem(33);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: px2rem(20);
+  box-sizing: content-box;
+  position: relative;
+}
+
+.comment-list .time-actions .time {
+  font-weight: 300;
+  font-size: px2rem(24);
+  color: #818181;
+}
+
+.comment-list .time-actions .actions {
+  display: flex;
+}
+
+.comment-list .time-actions .actions .support,
+.comment-list .time-actions .actions .oppose {
+  display: inline-flex;
+  color: #9b9b9b;
+  font-size: px2rem(24);
+  height: 100%;
+  align-items: center;
+}
+
+.comment-list .time-actions .actions i {
+  display: block;
+  width: px2rem(30);
+  height: px2rem(30);
+  margin-right: px2rem(10);
+  background-size: cover;
+  margin-left: px2rem(25);
+  font-size: px2rem(30);
+}
+
+.comment-list .time-actions .actions i.post-up {
+  background-image: url(https://qgt-style.oss-cn-hangzhou.aliyuncs.com/img/sandwich/post-action-up.png);
+}
+
+.comment-list .time-actions .actions i.post-down {
+  background-image: url(https://qgt-style.oss-cn-hangzhou.aliyuncs.com/img/sandwich/post-action-down.png);
+}
+
+.comment-list .reply {
+  height: px2rem(69);
+  text-align: left;
+  color: #3492fd;
+  font-size: px2rem(26);
+  border-top: 1px dashed #e5e5e5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.comment-list .reply .icon.arrow-right {
+  width: px2rem(30);
+  height: px2rem(30);
+  margin-left: px2rem(10);
+  background: url(https://qgt-style.oss-cn-hangzhou.aliyuncs.com/img/sandwich/arrow-right.png) no-repeat center/contain;
+}

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* 浏览器都有自己的默认样式，以上部分为清除浏览器默认样式 */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 17.06667px;
+  }
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+body {
+  max-width: 414px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
